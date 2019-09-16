@@ -6,7 +6,6 @@ import {Action} from "./actions";
 import {Character} from "../game/character";
 import {COLOR} from "../game/color";
 import {DIRECTION} from "../game/direction";
-import {Bonus} from "../game/bonus";
 import {BONUSTYPE} from "../game/bonus-type";
 import {GAMESTATUS} from "../game/geme-status";
 import {Music} from "../utils/music";
@@ -143,6 +142,7 @@ export class State {
             }
             case Action.ADD_BLAST:
                 state.blasts.push(new Blast(action.payload.bomb, action.payload.character, state.map, state.walls, state.bombs, state.characters));
+                console.log(action.payload.character)
                 return {
                     ...state,
                 };
