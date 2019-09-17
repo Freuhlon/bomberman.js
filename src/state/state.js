@@ -141,8 +141,7 @@ export class State {
                 return this.state;
             }
             case Action.ADD_BLAST:
-                state.blasts.push(new Blast(action.payload.bomb, action.payload.character, state.map, state.walls, state.bombs, state.characters));
-                console.log(action.payload.character)
+                state.blasts.push(new Blast(action.payload.bomb, action.payload.character, state.map, state.walls, state.bombs, state.characters, state.bonus));
                 return {
                     ...state,
                 };
@@ -233,6 +232,14 @@ export class State {
                     ...state
                 };
 
+            }
+
+            case Action.BONUS_EXPLODED: {
+                const bonus = state.bonus.find(item => item.x === action.payload.item.x && item.y === action.payload.item.y);
+                state.bonus.splice(state.bonus.indexOf(bonus), 1);
+                return {
+                    ...state
+                }
             }
         }
 

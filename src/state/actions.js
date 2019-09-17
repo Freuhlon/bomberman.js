@@ -6,7 +6,6 @@ export const Action = {
     ENTER: "ENTER",
     ADD_PLAYER : "ADD_PLAYER",
     MENU_OVERFLOW: "MENU_OVERFLOW",
-    ESCAPE: "ESCAPE",
     RESET: "RESET",
     ADD_BLAST: "ADD_BLAST",
     BLAST_VANISHED: "BLAST_VANISHED",
@@ -16,7 +15,7 @@ export const Action = {
     KILL: "KILL",
     VICTORY: "VICTORY",
     INIT_GAME: "INIT_GAME",
-    CONSUME_BONUS: "CONSUME_BONUS",
+    BONUS_EXPLODED: "BONUS_EXPLODED",
     GET_BONUS: "GET_BONUS",
     MOVE: "MOVE",
 

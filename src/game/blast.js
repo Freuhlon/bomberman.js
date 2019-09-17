@@ -4,7 +4,7 @@ import {Action} from "../state/actions";
 import {CharacterStatus} from "./character-status";
 
 export class Blast {
-    constructor(bomb, character, map, walls, bombs, characters) {
+    constructor(bomb, character, map, walls, bombs, characters, bonus) {
         this.walls = walls;
         this.map = map;
         this.x = bomb.x;
@@ -17,6 +17,7 @@ export class Blast {
         this.bombs = bombs;
         this.characters = characters;
         this.character = character;
+        this.bonus = bonus;
         this.canPropagate = {north: true, east: true, south : true, west: true}
     }
 
@@ -50,7 +51,7 @@ export class Blast {
         this.flames.forEach(flame => {
             flame.render(canvasContext);
 
-            this.bombs.forEach(function (bomb) {
+            this.bombs.forEach(bomb => {
                 if (bomb.x === flame.x && bomb.y === flame.y) {
 
                     document.dispatchEvent(new CustomEvent('action', {
@@ -64,6 +65,17 @@ export class Blast {
                         detail: {
                             type: Action.BOMB_EXPLODED,
                             payload: {bomb: bomb}
+                        }
+                    }));
+                }
+            });
+
+            this.bonus.forEach(item => {
+                if(item.x === flame.x && item.y === flame.y) {
+                    document.dispatchEvent(new CustomEvent('action', {
+                        detail: {
+                            type: Action.BONUS_EXPLODED,
+                            payload: {item}
                         }
                     }));
                 }
