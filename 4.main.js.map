@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/assets/songs/EXPLOSION_02_2.ogg"],"names":["module","exports"],"mappings":"4EAAAA,EAAOC,QAAU,IAA0B","file":"4.main.js","sourcesContent":["module.exports = __webpack_public_path__ + \"assets/songs/EXPLOSION_02_2.ogg\";"],"sourceRoot":""}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/assets/songs/BOMBER_DEATH.ogg"],"names":["module","exports"],"mappings":"4EAAAA,EAAOC,QAAU,IAA0B","file":"1.main.js","sourcesContent":["module.exports = __webpack_public_path__ + \"assets/songs/BOMBER_DEATH.ogg\";"],"sourceRoot":""}

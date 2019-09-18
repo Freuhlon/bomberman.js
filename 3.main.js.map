@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/assets/songs/BREAK_1.ogg"],"names":["module","exports"],"mappings":"4EAAAA,EAAOC,QAAU,IAA0B","file":"3.main.js","sourcesContent":["module.exports = __webpack_public_path__ + \"assets/songs/BREAK_1.ogg\";"],"sourceRoot":""}
